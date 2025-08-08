@@ -13,10 +13,12 @@ function Favourite(){
         return (
         
         <div className = "favs"> <h2>Your favs</h2>
+        <div className = "favs-grid">
         <div className = "movies-grid">
             {Favourite.map((movie) => (
                 <Moviecard movie = {movie} key = {movie.id} />
             ))}
+        </div>
         </div>
         </div>)
     }

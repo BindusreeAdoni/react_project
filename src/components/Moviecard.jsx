@@ -1,5 +1,7 @@
 import "../css/Moviecard.css"
 import {useMovieContext} from "../contexts/MovieContext"
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function Moviecard({movie}){
 
@@ -18,8 +20,9 @@ function Moviecard({movie}){
                         where string interpolation is creating a new string by doing substitution of placeholders*/}
             <img src = {`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt= {movie.title}/>
             <div className = "movie-overlay">
-                <button className = {`favourite-btn ${Favourite? "active" : ""}`} onClick = {onFavClick}> 
-                    🤍
+                <button className = {`favourite-btn ${Favourite? "active" : ""}`} 
+                    onClick = {onFavClick}> 
+                     <i className="fas fa-heart"></i>
                 </button>
             </div>
             </div>
